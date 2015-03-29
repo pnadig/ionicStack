@@ -1,0 +1,54 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-positive item-input-inset" animation="nav-title-slide-ios7">
+    </ion-nav-bar>
+    <ion-nav-buttons side="right">
+      <button ng-click="setFocus()" ng-hide="hasFocus" class="button button-icon ion-ios7-search-strong animated"></button>
+      <span ng-show="hasFocus" class="animated">
+        <label class="item-input-wrapper animated">
+          <i class="icon ion-ios7-search placeholder-icon"></i>
+          <input ng-blur="noFocus()" type="search" placeholder="Search">
+        </label>
+        <button ng-click="noFocus()" class="button button-clear animated">
+          Cancel
+        </button>
+      </span>
+    </ion-nav-buttons>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-positive">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header darkk">
+      <ion-list class>
+        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.login" class = "item-icon-left item-dark">
+          <i class="icon ion-log-in"></i>
+          <span class="white">Login</span>
+        </ion-item>
+        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.signup" class = "item-icon-left item-dark">
+          <i class="icon ion-compose"></i>
+          <span class="white">Sign Up</span>
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.search" class = "item-icon-left item-dark">
+          <i class="icon ion-search"></i>
+          <span class="white">Search</span>
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.playlists" class = "item-icon-left item-dark">
+          <i class="icon ion-music-note"></i>
+          <span class="white">Playlists</span>
+        </ion-item>
+        <ion-item ng-show="isLoggedIn()" nav-clear menu-close ui-sref="app.settings" class = "item-icon-left item-dark">
+          <i class="icon ion-ios7-gear"></i>
+          <span class="white">Settings</span>
+        </ion-item>
+        <ion-item ng-show="isLoggedIn()" nav-clear menu-close ng-click="show()" class = "item-icon-left item-dark">
+          <i class="icon ion-log-out"></i>
+          <span class="white">Log Out {{getCurrentUser().name}}</span>
+        </ion-item>
+      </ul>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

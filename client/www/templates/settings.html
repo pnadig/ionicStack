@@ -1,0 +1,54 @@
+<ion-view title="Profile">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-refresher on-refresh="doRefresh()"
+                 pulling-text="Pull to refresh..."
+                 refreshing-text="Refreshing!"
+                 refreshing-icon="ion-loading-c"> 
+  	</ion-refresher>
+  	<div class="padding">
+  		<img ng-src="http://graph.facebook.com/{{getCurrentUser().facebook.id}}/picture?width=200&height=200" id="profile-image" />
+  	</div>
+  	<div class="padding-vertical text-center">
+	    <h5 id="profile-name">{{getCurrentUser().name}}</h2>
+	    <p id="profile-description">{{getCurrentUser().email}}</p>
+	  </div>
+		<div class="button-full button-bar padding-vertical">
+		  <a class="button button-small">
+		  	<b>Tweets</b>
+		  	140
+		  </a>
+		  <a class="button button-small">
+		  	<b>Following</b>
+		  	50
+		  </a>
+		  <a class="button button-small">
+		  	<b>Followers</b>
+		  	10
+		  </a>
+		</div>
+    <div class="list">
+	    <!-- <a class="item item-avatar">
+	      <img ng-src="http://graph.facebook.com/{{getCurrentUser().facebook.id}}/picture?width=200&height=200">
+	      <h2>Venkman</h2>
+	      <p>Back off, man. I'm a scientist.</p>
+	    </a> -->
+	    <div class="item item-avatar animate-repeat"
+                  ng-repeat="i in items"
+                  ng-click="items.splice($index, 1)">
+          Item {{i}}
+      </div>
+		</div>
+  </ion-content>
+ 	
+</ion-view>
+
+<ion-content>
+      <div class="card-wrap">
+        <div class="card full-card">
+       		<img ng-src="http://graph.facebook.com/{{getCurrentUser().facebook.id}}/picture?width=200&height=200" class="profile-pic"/>
+      	</div>
+      </div>
+      </div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!--<link rel="stylesheet" href="lib/ionic/css/ionic.css" /> -->
+
+    <!--Add colon between bower and css below to inject css dependencies
+        from bower. N.B. currently managing CSS files via Sass in SCSS folder-->
+        
+    <!-- bowercss -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/ionic.app.min.css">
+    <!-- endinject -->
+
+    <!-- ionic/angularjs js -->
+    <!--<script src="bower_components/ionic/js/ionic.bundle.js"></script>-->
+
+    <!-- bower:js -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/json3/lib/json3.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/lodash/dist/lodash.compat.js"></script>
+    <script src="lib/angular-socket-io/socket.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/collide/collide.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/ionic/js/ionic.js"></script>
+    <script src="lib/ionic/js/ionic-angular.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <!-- endinject -->
+
+    <!-- Main js file to be included first. TODO make gulp inject file -->
+    <script src="js/app.js"></script>
+    
+    <!-- your app's js -->
+    
+    <!-- inject:js -->
+    <script src="account/account.js"></script>
+    <script src="admin/admin.controller.js"></script>
+    <script src="admin/admin.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="main/main.controller.js"></script>
+    <script src="main/main.controller.spec.js"></script>
+    <script src="main/main.js"></script>
+    <script src="account/login/login.controller.js"></script>
+    <script src="account/signup/signup.controller.js"></script>
+    <script src="account/settings/settings.controller.js"></script>
+    <script src="components/auth/auth.service.js"></script>
+    <script src="components/auth/user.service.js"></script>
+    <script src="components/config/config.service.js"></script>
+    <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+    <script src="components/navbar/navbar.controller.js"></script>
+    <script src="components/socket/socket.mock.js"></script>
+    <script src="components/socket/socket.service.js"></script>
+    <!-- endinject -->
+    
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
