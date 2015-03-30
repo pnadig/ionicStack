@@ -30,14 +30,17 @@
           <p ng-if="errors.other"class="item help-block">{{ errors.other }}</p>
           <p ng-hide="isOnline" class="item help-block error">No internet connection!</p>
         </div>
+        
+        <label class="item">
+          <button ng-class="{disabled: !isOnline}" class="button button-block button-calm" type="submit">Log in</button>
+        </label>
+
         <a class="item item-icon-left item-icon-right" ui-sref="app.signup">
           <i class="icon ion-compose"></i>
           Sign Up
           <i class="icon ion-arrow-right-c"></i>
         </a>
-        <label class="item">
-          <button ng-class="{disabled: !isOnline}" class="button button-block button-calm" type="submit">Log in</button>
-        </label>
+        
       </div>
     </form>
     <div class="list">

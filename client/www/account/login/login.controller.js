@@ -18,7 +18,8 @@ angular.module('starter')
           })
           .then( function() {
             // Logged in, redirect to home
-            $location.path('/');
+            //$location.path('/settings');
+            $state.go('app.settings');
           })
           .catch( function(err) {
             $scope.errors.other = err.message;
@@ -40,7 +41,7 @@ angular.module('starter')
             loginWindow.close();
             Auth.updateUserAndToken(token);
             console.log(token);
-            $location.path('/');
+            $location.path('/app');
           }
         })
       }

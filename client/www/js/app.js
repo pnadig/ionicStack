@@ -66,6 +66,7 @@ angular.module('starter', [
   })
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+  
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
@@ -83,8 +84,8 @@ angular.module('starter', [
         'menuContent' :{
           templateUrl: "templates/search.html"
         }
-      }/*,
-      authenticate: true*/
+      },
+      authenticate: true
     })
 
     .state('app.settings', {
@@ -105,7 +106,8 @@ angular.module('starter', [
           templateUrl: "templates/playlists.html",
           controller: 'PlaylistsCtrl'
         }
-      }
+      },
+      authenticate: true
     })
 
     .state('app.single', {

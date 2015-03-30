@@ -24,14 +24,7 @@
     </header>
     <ion-content class="has-header darkk">
       <ion-list class>
-        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.login" class = "item-icon-left item-dark">
-          <i class="icon ion-log-in"></i>
-          <span class="white">Login</span>
-        </ion-item>
-        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.signup" class = "item-icon-left item-dark">
-          <i class="icon ion-compose"></i>
-          <span class="white">Sign Up</span>
-        </ion-item>
+        
         <ion-item nav-clear menu-close ui-sref="app.search" class = "item-icon-left item-dark">
           <i class="icon ion-search"></i>
           <span class="white">Search</span>
@@ -47,6 +40,14 @@
         <ion-item ng-show="isLoggedIn()" nav-clear menu-close ng-click="show()" class = "item-icon-left item-dark">
           <i class="icon ion-log-out"></i>
           <span class="white">Log Out {{getCurrentUser().name}}</span>
+        </ion-item>
+        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.login" class = "item-icon-left item-dark">
+          <i class="icon ion-log-in"></i>
+          <span class="white">Login</span>
+        </ion-item>
+        <ion-item ng-hide="isLoggedIn()" nav-clear menu-close ui-sref="app.signup" class = "item-icon-left item-dark">
+          <i class="icon ion-compose"></i>
+          <span class="white">Sign Up</span>
         </ion-item>
       </ul>
     </ion-content>
